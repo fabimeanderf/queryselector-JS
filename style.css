@@ -1,0 +1,235 @@
+/*remis à zéro des marges intérieures et extérieures ainsi que le box-sizing 
+ le box-sizing:en valeur border-box  indique au navigateur de prendre en compte la bordure et le remplissage
+  dans la valeur définie pour la largeur et la hauteur.
+  Autrement dit, si on définit un élément avec une largeur de 100 pixels, ces 100 pixels inclueront la bordure et le remplissage éventuellement ajoutés*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*couleur de fond sur le body et alignement du texte dans le body*/
+/*16px:détermination du rem (root em) dans le body, cela sera la valeur de référence du font-size */
+body {
+  background-color: rgb(221, 219, 219);
+  text-align: center;
+  font-size: 16px; /*rem*/
+}
+
+/*h2:marge en partant du top , right,bottom et left 
+deux valeurs top et bottom à 50px ,auto pôur left et right ce qui place le H2 horizontalement au centre du body  
+hauteur de 26px ,sachant que 1em est égal à 16 px,2em = 32px donc 26px = (26/16)=  1.625Em 
+couleur de police et style de police italique*/
+h2 {
+  margin: 50px auto;
+  width: 80%;
+  font-size: 26px;
+  color: rgb(39, 44, 107);
+  font-style: italic;
+}
+
+/*séparateur entre chaque paragraphe */
+/*une marge top et bottom de 10px et une mage automatique gauche et droite, cela centre l'élément Hr,
+une largeur de 40% permaneente quelquesoit la taille de l'écran,
+une background sous la forme d'un linear gradient de gauche à droite #b8e0b #cad87c #e7a89d
+une épaisseur de 5px*/
+hr {
+  margin: 10px auto;
+  width: 40%;
+  background: linear-gradient(to right, #b8e0b8, #cad87c, #e7a89d);
+  height: 5px;
+}
+
+/*div conteneur avec une marge gauche de 10px
+un alignement de texte à gauche
+ce conteneur contient les 4 paragraphes et leurs commandes d'affichage*/
+
+.container {
+  margin-left: 10px;
+  text-align: left;
+}
+/*********************************************************************************************************************************************************************/
+/*gestion du premier bouton btnShow "pour en savoir plus..."
+on l'affiche en ligne dans le flux,
+on lui met un texte centré,
+on lui place une marge gauche de 50px par rapport à la DIV container,
+une couleur de police blanche,
+Une largeur de 180px,
+un curseur en position pointeur sur le bouton ,
+On le rend visible avec la propriété visibility sur visible,
+un bord de 1 px solide avec une couleur rgb(161, 153, 153)
+un arrondit des quatres coins du bouton de 10px,
+un fond de couleur de rgb(121, 116, 116),
+un padding de haut et bas de 2px, de gauche et droite de 4 px 
+*/
+.btnShow {
+  display: inline;
+  text-align: center;
+  margin-left: 50px;
+  color: white;
+  font-size: 18px;
+  width: 180px;
+  cursor: pointer;
+  visibility: visible;
+  border: 1px solid rgb(161, 153, 153);
+  border-radius: 10px;
+  background-color: rgb(121, 116, 116);
+  padding: 2px 4px 2px 4px;
+}
+
+/*pour cacher le bouton, on ajoute la classe BtnHidden qui va supplanter la valeur visible par la valeur hidden de la propriété visibility*/
+
+.BtnHidden {
+  visibility: hidden;
+}
+
+/*Une petite animation en survol changeant la police en italique et changeant le fond du bouton en noir  */
+.btnShow:hover {
+  font-style: italic;
+  background-color: rgb(36, 37, 37);
+}
+/**********************************************************************************************************************************************************************/
+
+/*gestion du deuxième onglet de retour */
+/*le bouton de retour est caché par la propriété visibility avec valeur :hidden
+il est affiché en ligne dans le flux juste après le bouton "pour en savoir plus......"
+on lui met une mage de 0 que l'on va modifier en négatif pour l'animation */
+.btnReturn {
+  display: inline;
+  margin: 0px;
+  visibility: hidden;
+}
+
+/*au survol, la poilce devient italique*/
+
+.btnReturn:hover {
+  font-style: italic;
+}
+
+/*le bouton de retour en vue sera:
+ avec une police de couleur blanche,
+ visible avec la propriété visibility avec valeur visible,
+ une hauteur de police de 18px
+ une largeur de 280px,
+ une marge gauche de -334px pour ramener le bouton à gauche en transition
+ un curseur sur pointeur ,
+ un bord de 1px solide et couleur grise,
+ un arrondi au 4 bords  de 10px
+ un fond de couleur gris foncé,
+ une marge intérieure de 2px en haut et bas et de 4px gauche et droite 
+ une transition qui joue sur la marge */
+.btnRetwiew {
+  color: rgb(253, 253, 253);
+  visibility: visible;
+  font-size: 18px;
+  width: 280px;
+  margin-left: -334px;
+  cursor: pointer;
+  border: 1px solid rgb(161, 153, 153);
+  border-radius: 10px;
+  background-color: rgb(121, 116, 116);
+  padding: 2px 4px;
+  transition: margin 2s;
+}
+
+/*******************************************************************************************************************************************************************************/
+
+/*gestion du paragraphe en caché ou présenté */
+
+/*pour la classe caché
+juste quatres marges définies: 20 px en haut,20px à droite,0px en bas,50px à gauche
+un texte avec alignement à gauche
+un non affichage du paragraphe avec la propriété display en none  */
+.cachep {
+  margin: 20px 20px 0px 50px;
+  text-align: left;
+  display: none;
+  width: 0%;
+}
+
+/*l'appel de la classe visiblep va modifier le display:none en display block
+ cette classe: donne une séparation entre lignes de 25px,
+ met la police en italique,
+ met une marge intérieure gauche et droite de 20px, le haut et bas étant à 0px,
+ on place une bordure gauche et en bas solide en grise,
+ on place un border-radius juste à la jonction gauche et basse,
+ on place une ombre sous le paragraphe avec box-shadow,
+ on affiche le paragraphe et on lui met une largeur de 94%
+  */
+.visiblep {
+  line-height: 25px;
+  font-style: italic;
+  padding: 0px 20px;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
+  border-radius: 0px 0px 0px 10px;
+  box-shadow: -1px 2px 5px rgb(139, 125, 125);
+  display: block;
+  width: 94%;
+}
+
+/********************************************************************************************************************************************************************/
+
+/*média queries pour adapter les éléments en foncion des supports d'écrans
+cela ne concerne que la largeur du paragraphe*/
+@media only screen and (max-width: 1200px) {
+  .visiblep {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .visiblep {
+    width: 86%;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .visiblep {
+    width: 84%;
+  }
+
+  /*classes pour colorier la police de caractères**********************************************************************************************/
+}
+.red {
+  color: red;
+}
+.bred {
+  background-color: rgb(93, 5, 5);
+}
+
+.green {
+  color: green;
+}
+
+/*classes pour modifier le background des boutons "en savoir plu*/
+,
+.bgreen {
+  background-color: rgb(10, 92, 10);
+}
+
+.orange {
+  color: orange;
+}
+
+.borange {
+  background-color: rgb(114, 77, 9);
+}
+
+.blue {
+  color: blue;
+}
+.bblue {
+  background-color: rgb(6, 6, 68);
+}
+
+/*modification de la balise span des paragraphes ^pour augmenter la police , mettre un soulignement et remettre le style de la police en normal*/
+
+p span {
+  font-size: 22px;
+  text-decoration: underline;
+  font-style: normal;
+}

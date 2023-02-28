@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe Dom avec QuerySelectorAll et le click</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--lien vers le fichier css externe-->
+</head>
+
+<body>
+    <div class="exe2">
+        <h2>
+            Exercice sur le Dom avec des éléments comportant la même classe appelés en Js par querySelectorAll()
+            sous événement click
+        </h2>
+
+        <!--une DIv conteneur contenant 4 entités
+        chaque entité contient  deux paragraphes réalisant les deux boutons en inline donc dans le flux , le p class="btnShow et le p class="btnReturn" se suivent  
+        ensuite vient le paragraphe contenant tout le texte 
+        le btnShow a une deuxième classe (Bred,bgreen;Bblue,Borange) pour un changement de couleur de background 
+        le paragraphe montrant le texte  a une deuxième classe(red,green,blue,orange) pour changer la couleur de leurs polices respectives  -->
+
+        <div class="container">
+            <p class="btnShow bred" href=""> Pour en savoir plus: afficher le paragraphe 1 </p>
+            <p class="btnReturn" href="">Fermeture</p>
+            <p class="cachep red"><span>premier paragraphe caché et présenté en cliquant sur "pour en
+                    savoir
+                    Plus"</span><br>
+                exercitationem quod
+                labore voluptatem id voluptates quibusdam qui sapiente. Inventore, rem eaque. Autem unde iure nihil
+                fuga
+                amet ducimus! Adipisci nobis nesciunt quas facilis sequi eligendi consectetur ducimus nemo hic, at
+                excepturi
+                ullam tempore odio quia asperiores iusto! Suscipit nisi expedita qui consequatur dolorem
+                ipsum
+                quasi
+                aspernatur unde, sit neque molestias id impedit nemo sequi et quidem sunt, nostrum officiis
+                asperiores.
+                Aspernatur aliquid quidem nobis, ullam aperiam aliquam doloremque quaerat? Ea deserunt alias qui,
+                minima
+                harum eum officiis labore.
+            </p>
+
+            <br>
+            <hr>
+            <p class="btnShow bblue" href=""> Pour en savoir plus: afficher le paragraphe 2 </p>
+            <p class="btnReturn" href="">Fermeture</p>
+            <p class="cachep blue"><span>deuxième paragraphe caché et présenté en cliquant sur "pour en
+                    savoir Plus"</span><br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem modi
+                exercitationem quod
+                labore voluptatem id voluptates quibusdam qui sapiente. Inventore, rem eaque. Autem unde iure nihil fuga
+                amet ducimus! Adipisci nobis nesciunt quas facilis sequi eligendi consectetur ducimus nemo hic, at
+                excepturi
+                ullam tempore odio quia asperiores iusto! Suscipit nisi expedita qui consequatur dolorem
+                ipsum
+                quasi
+                aspernatur unde, sit neque molestias id impedit nemo sequi et quidem sunt, nostrum officiis asperiores.
+                Aspernatur aliquid quidem nobis, ullam aperiam aliquam doloremque quaerat? Ea deserunt alias qui, minima
+                harum eum officiis labore.
+            </p>
+            <br>
+            <hr>
+            <p class="btnShow bgreen" href=""> Pour en savoir plus : afficher le paragraphe 3 </p>
+            <p class="btnReturn" href="">Fermeture</p>
+            <p class="cachep green"><span>Troisième paragraphe caché et présenté en cliquant sur "pour en
+                    savoir Plus"</span><br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem modi
+                exercitationem quod
+                labore voluptatem id voluptates quibusdam qui sapiente. Inventore, rem eaque. Autem unde iure nihil fuga
+                amet ducimus! Adipisci nobis nesciunt quas facilis sequi eligendi consectetur ducimus nemo hic, at
+                excepturi
+                ullam tempore odio quia asperiores iusto! Suscipit nisi expedita qui consequatur dolorem
+                ipsum
+                quasi
+                aspernatur unde, sit neque molestias id impedit nemo sequi et quidem sunt, nostrum officiis asperiores.
+                Aspernatur aliquid quidem nobis, ullam aperiam aliquam doloremque quaerat? Ea deserunt alias qui, minima
+                harum eum officiis labore.
+            </p>
+            <br>
+            <hr>
+            <p class="btnShow borange" href=""> Pour en savoir plus :afficher le paragraphe 4 </p>
+            <p class="btnReturn" href="">Fermeture</p>
+            <p class="cachep orange"><span>quatrième paragraphe caché et présenté en cliquant sur "pour en
+                    savoir Plus"</span><br>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem modi
+                exercitationem quod
+                labore voluptatem id voluptates quibusdam qui sapiente. Inventore, rem eaque. Autem unde iure nihil fuga
+                amet ducimus! Adipisci nobis nesciunt quas facilis sequi eligendi consectetur ducimus nemo hic, at
+                excepturi
+                ullam tempore odio quia asperiores iusto! Suscipit nisi expedita qui consequatur dolorem
+                ipsum
+                quasi
+                aspernatur unde, sit neque molestias id impedit nemo sequi et quidem sunt, nostrum officiis asperiores.
+                Aspernatur aliquid quidem nobis, ullam aperiam aliquam doloremque quaerat? Ea deserunt alias qui, minima
+                harum eum officiis labore.
+            </p>
+
+        </div>
+    </div>
+
+
+    <script src=js/app.js></script>
+    <!--lien vers le fichier js externe-->
+</body>
+
+</html>
